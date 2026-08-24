@@ -1,0 +1,200 @@
+/* =========================     INDEX PAGE DESTINATION     ========================= */
+.destination {
+    background-color: #faf8f8;
+    color: #1F2937;
+}
+.dest-content {
+    align-items: center;
+    gap: 60px;
+    width: min(1420px, 90%);
+    margin: 0 auto;
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+.btn-dest {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  margin-bottom: 30px;
+}
+.dest-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.dest-card {
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  transition: 0.3s;
+  box-shadow:
+    0 8px 15px rgba(0, 0, 0, 0.2),
+    0 12px 30px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.dest-card:hover {
+  transform: translateY(-10px) scale(1.025);
+
+  box-shadow:
+    0 25px 40px rgba(0, 0, 0, 0.25),
+    0 40px 80px rgba(0, 0, 0, 0.18);
+}
+.dest-card img {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+}
+.dest-card h3 {
+  margin: 20px 10px 3px 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.dest-card p {
+  margin: 3px 10px;
+  color: gray;
+}
+.dest-card a {
+  display: inline-block;
+  margin: 3px 10px;
+  color: green;
+  text-decoration: none;
+  font-weight: 500;
+}
+.dest-card a:hover {
+  text-decoration: underline;
+}
+
+/* =========================     TABLET (3 COLUMNS)     ========================= */
+@media (max-width: 1024px) {
+  .dest-content {
+    gap: 40px;
+    padding: 40px 0;
+  }
+
+  .dest-card-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    padding: 15px;
+  }
+
+  .dest-card img {
+    height: 160px;
+  }
+
+  .dest-card h3 {
+    font-size: 1.05rem;
+    margin: 15px 10px 3px 10px;
+  }
+
+  .dest-card p {
+    font-size: 0.9rem;
+  }
+
+  .page-head {
+    font-size: 1.8rem;
+  }
+}
+
+/* =========================     SMALL TABLET / LARGE MOBILE     ========================= */
+@media (max-width: 768px) {
+  .dest-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 12px;
+  }
+
+  .btn-dest {
+    justify-content: flex-start;
+    padding-right: 0;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .page-head {
+    font-size: 1.5rem;
+  }
+}
+
+/* =========================     MOBILE (2 COLUMNS)     ========================= */
+@media (max-width: 480px) {
+  .dest-content {
+    gap: 25px;
+    padding: 30px 0;
+    width: 92%;
+  }
+
+  .section-head {
+    font-size: 0.85rem;
+  }
+
+  .page-head {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .dest-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 8px;
+  }
+
+  .dest-card {
+    border-radius: 10px;
+  }
+
+  .dest-card img {
+    height: 100px;
+  }
+
+  .dest-card h3 {
+    font-size: 0.85rem;
+    margin: 8px 8px 2px 8px;
+    line-height: 1.2;
+  }
+
+  .dest-card p {
+    font-size: 0.72rem;
+    margin: 2px 8px;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .dest-card a {
+    font-size: 0.72rem;
+    margin: 2px 8px 8px 8px;
+  }
+
+  .dest-card a i {
+    font-size: 0.7rem;
+  }
+
+  .btn-dest .btn {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+}
+
+/* =========================     VERY SMALL MOBILE (OPTIONAL)     ========================= */
+@media (max-width: 360px) {
+  .dest-card-container {
+    gap: 8px;
+    padding: 6px;
+  }
+
+  .dest-card img {
+    height: 85px;
+  }
+
+  .dest-card h3 {
+    font-size: 0.78rem;
+  }
+
+  .dest-card p {
+    font-size: 0.68rem;
+  }
+}

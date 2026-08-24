@@ -1,0 +1,236 @@
+/* =========================    HOTEL SECTION    ========================= */
+.hotel {
+    background-color: #ffffff;
+    color: #1F2937;
+}
+.hotel-content {
+    align-items: center;
+    gap: 60px;
+    width: min(1420px, 90%);
+    margin: 0 auto;
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+.hotel-content .page-title{
+    text-align: center;
+}
+.hotel-content h3{
+    margin: 10px;
+}
+.hotel-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.hotel-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 220px;
+  background: white;
+
+  box-shadow:
+    0 8px 15px rgba(0, 0, 0, 0.2),
+    0 12px 30px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hotel-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 20px;
+  color: white;
+
+  background: linear-gradient(
+    to top,
+    rgb(3, 15, 27) 0%,
+    rgba(7, 31, 56, 0.582) 60%,
+    rgba(4, 22, 41, 0) 100%
+  );
+}
+.hotel-card:hover {
+  transform: translateY(-10px) scale(1.025);
+
+  box-shadow:
+    0 25px 40px rgba(0, 0, 0, 0.25),
+    0 40px 80px rgba(0, 0, 0, 0.18);
+}
+
+.hotel-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.hotel-card i {
+  margin: 0px 10px 0px 10px;
+  font-size: 1.7rem;
+  color: #facc15;
+}
+.hotel-card h3 {
+  margin: 20px 10px 3px 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.hotel-card p {
+  margin: 3px 10px;
+  color: gray;
+}
+.button-hotel{
+    text-align: center;
+    margin: 20px 0px;
+}
+.btn-hotel{
+    color: white;
+    border: none;
+    background: #1E8E6E;
+    border-radius: 30px;
+    padding: 10px 28px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+.btn-hotel:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(31, 41, 55, 0.2);
+}
+
+/* =========================     CREATIVE BENTO GRID (<800px)     ========================= */
+@media (max-width: 800px) {
+  .hotel-content {
+    gap: 30px;
+    padding: 30px 0;
+  }
+
+  .page-head {
+    font-size: 1.4rem;
+  }
+
+  .hotel-content h3 {
+    font-size: 0.85rem;
+  }
+
+  .hotel-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 14px;
+    padding: 10px;
+    aspect-ratio: 1 / 1.1; /* keeps the whole mosaic within one screen height */
+  }
+
+  .hotel-card {
+    position: relative;
+    height: auto;
+    border-radius: 24px;
+    overflow: visible; /* let the badge float outside the card edge */
+  }
+
+  /* organic alternating corner shapes — breaks the boring uniform-grid feel */
+  .hotel-card:nth-child(1) { border-radius: 30px 30px 30px 8px; }
+  .hotel-card:nth-child(2) { border-radius: 30px 30px 8px 30px; transform: translateY(10px); }
+  .hotel-card:nth-child(3) { border-radius: 8px 30px 30px 30px; transform: translateY(-10px); }
+  .hotel-card:nth-child(4) { border-radius: 30px 8px 30px 30px; }
+
+  .hotel-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+
+  /* frosted glass text panel instead of flat gradient */
+  .hotel-overlay {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 10px 12px 10px 12px;
+    border-radius: inherit;
+    background: rgba(3, 15, 27, 0.45);
+    backdrop-filter: blur(6px) saturate(140%);
+    -webkit-backdrop-filter: blur(6px) saturate(140%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 55%;
+  }
+
+  /* icon escapes the card as a floating circular badge */
+  .hotel-card i {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    margin: 0;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    color: #1F2937;
+    background: #facc15;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+  }
+
+  .hotel-overlay h3 {
+    margin: 0 0 2px 0;
+    font-size: 0.82rem;
+    line-height: 1.2;
+    color: white;
+    font-weight: 700;
+  }
+
+  /* description survives, but tightened + clamped instead of removed */
+  .hotel-overlay p {
+    margin: 0;
+    font-size: 0.62rem;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.85);
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .hotel-card:hover {
+    transform: none;
+    box-shadow:
+      0 8px 15px rgba(0, 0, 0, 0.2),
+      0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+  .hotel-card:nth-child(2):hover { transform: translateY(10px); }
+  .hotel-card:nth-child(3):hover { transform: translateY(-10px); }
+
+}
+
+/* =========================     SMALL PHONE FIT (<400px)     ========================= */
+@media (max-width: 400px) {
+  .hotel-card-container {
+    gap: 10px;
+    aspect-ratio: 1 / 1.25;
+  }
+  .hotel-card i {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+    top: -10px;
+    left: -10px;
+  }
+  .hotel-overlay h3 {
+    font-size: 0.75rem;
+  }
+  .hotel-overlay p {
+    font-size: 0.58rem;
+  }
+}

@@ -1,0 +1,173 @@
+/* =========================     INSPIRED SECTION     ========================= */
+.inspired {
+    background-color: #ffffff;
+    color: #1F2937;
+}
+.inspired-content {
+    align-items: center;
+    gap: 60px;
+    width: min(1420px, 90%);
+    margin: 0 auto;
+    padding: 50px 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.inspired-content .page-title{
+    text-align: center;
+    width: 85%;
+    margin: 20px auto 40px auto;
+}
+
+/* =========================     MASONRY GALLERY GRID     ========================= */
+.inspired-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 160px;
+  grid-auto-flow: dense;
+  gap: 16px;
+  padding: 20px;
+}
+
+.inspired-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  grid-row: span 1;
+  grid-column: span 1;
+
+  box-shadow:
+    0 8px 15px rgba(0, 0, 0, 0.2),
+    0 12px 30px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* size variants create the masonry rhythm */
+.inspired-tall {
+  grid-row: span 2;
+}
+.inspired-wide {
+  grid-column: span 2;
+}
+
+.inspired-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  z-index: 3;
+  box-shadow:
+    0 25px 40px rgba(0, 0, 0, 0.25),
+    0 40px 80px rgba(0, 0, 0, 0.18);
+}
+
+.inspired-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.inspired-card:hover img {
+  transform: scale(1.08);
+}
+
+/* intro line — caption overlay, fades in on hover */
+.inspired-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  background: linear-gradient(
+    to top,
+    rgba(3, 15, 27, 0.75) 0%,
+    rgba(3, 15, 27, 0.15) 55%,
+    rgba(3, 15, 27, 0) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.inspired-card:hover .inspired-overlay {
+  opacity: 1;
+}
+
+.inspired-overlay p {
+  margin: 0;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* =========================
+   INSPIRED RESPONSIVE
+========================= */
+@media (max-width: 1200px) {
+  .inspired-card-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 140px;
+    grid-auto-flow: dense;
+  }
+}
+
+@media (max-width: 900px) {
+  .inspired-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 130px;
+    grid-auto-flow: dense;
+    gap: 12px;
+    padding: 12px;
+  }
+  .inspired-wide {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-head {
+    font-size: 1.5rem;
+  }
+  .section-head {
+    font-size: 0.9rem;
+  }
+  .inspired-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 110px;
+    grid-auto-flow: dense;
+    gap: 8px;
+    padding: 8px;
+  }
+  .inspired-wide {
+    grid-column: span 2;
+  }
+  .inspired-overlay {
+    padding: 10px;
+    opacity: 1; /* always show caption on touch devices, no hover available */
+    background: linear-gradient(
+      to top,
+      rgba(3, 15, 27, 0.7) 0%,
+      rgba(3, 15, 27, 0) 70%
+    );
+  }
+  .inspired-overlay p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .inspired-content {
+    padding: 30px 0;
+  }
+  .page-head {
+    font-size: 1.25rem;
+  }
+  .inspired-card-container {
+    grid-auto-rows: 95px;
+    grid-auto-flow: dense;
+    gap: 6px;
+  }
+  .inspired-overlay p {
+    font-size: 0.62rem;
+  }
+}

@@ -182,7 +182,7 @@ body {
 .hero {
     min-height: 500px;
     height: 90vh;
-    background-image: url('Images/Places/ImageWithFallback1.png');
+    background-image: url('../Images/Places/ImageWithFallback1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -323,357 +323,6 @@ body {
 }
 
 
-/* =========================   
- ABOUT SECTION
-========================= */
-.about {
-    background-color: #ffffff;
-    color: #1F2937;
-}
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    width: min(1420px, 90%);
-    margin: 0 auto;
-    padding: 100px 0;
-    box-sizing: border-box;
-}
-.about-left {
-    flex: 1;
-    min-width: 0;
-}
-.about-mobile {
-  display: none;
-}
-.about-right {
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-/* Images */
-.about-img-box {
-    position: relative;
-    display: inline-block;
-    flex: 1;
-    min-width: 0;    
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 20px;
-}
-.about-img-1,
-.about-img-2 {
-  box-shadow:
-    0 15px 25px rgba(0, 0, 0, 0.2),
-    0 30px 50px rgba(0, 0, 0, 0.15);
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.about-img-box:hover,
-.about-img-2:hover {
-  transform: translateY(-10px) scale(1.025);
-
-  box-shadow:
-    0 25px 40px rgba(0, 0, 0, 0.25),
-    0 40px 80px rgba(0, 0, 0, 0.18);
-}
-.about-img-1 {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-}
-.about-img-2 {
-    flex: 1;
-    min-width: 0;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 20px;
-    margin-top: 50px;
-    display: block;
-}
-.about-img-text {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: max-content;
-    max-width: 95%;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    z-index: 2;
-}
-.about-img-text i {
-    padding: 10px;
-    background-color: #0e2947b2;
-    color: white;
-    border-radius: 10px;
-    flex-shrink: 0;
-}
-.about-img-text p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #1F2937;
-}
-
-/* Text */
-.section-head {
-    color: #6A7282;
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 16px;
-    letter-spacing: 0.5px;
-}
-.page-title {
-    text-align: left;
-}
-.page-head {
-    font-size: clamp(1.6rem, 3vw, 2.8rem);
-    font-weight: 700;
-    color: #1F2937;
-    margin: 0;
-    line-height: 1.2;
-}
-.about-para {
-    margin: 32px 0;
-    color: #374151;
-}
-.about-para p {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.75;
-    margin-bottom: 16px;
-}
-.about-para p:last-child {
-    margin-bottom: 0;
-}
-
-/* Button — dark variant to suit light background */
-.btn-dark-blue {
-    color: #1F2937;
-    border: 2px solid #1F2937;
-    background: transparent;
-    border-radius: 30px;
-    padding: 10px 28px;
-    font-size: 1rem;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-}
-.btn-dark-blue:hover {
-    background: #1F2937;
-    color: #ffffff;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(31, 41, 55, 0.2);
-}
-.btn-dark-blue i {
-    transition: transform 0.3s ease;
-}
-.btn-dark-blue:hover i {
-    transform: translateX(4px);
-}
-
-
-/* =========================
-   DSTINATION SECTION
-========================= */
-.destination {
-    background-color: #faf8f8;
-    color: #1F2937;
-}
-.dest-content {
-    align-items: center;
-    gap: 60px;
-    width: min(1420px, 90%);
-    margin: 0 auto;
-    padding: 50px 0;
-    box-sizing: border-box;
-}
-.btn-dest {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 20px;
-  margin-bottom: 30px;
-}
-.dest-card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.dest-card {
-  border-radius: 15px;
-  overflow: hidden;
-  background: white;
-  transition: 0.3s;
-  box-shadow:
-    0 8px 15px rgba(0, 0, 0, 0.2),
-    0 12px 30px rgba(0, 0, 0, 0.15);
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.dest-card:hover {
-  transform: translateY(-10px) scale(1.025);
-
-  box-shadow:
-    0 25px 40px rgba(0, 0, 0, 0.25),
-    0 40px 80px rgba(0, 0, 0, 0.18);
-}
-
-.dest-card img {
-  width: 100%;
-  height: 65%;
-  object-fit: cover;
-}
-
-.dest-card h3 {
-  margin: 20px 10px 3px 10px;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.dest-card p {
-  margin: 3px 10px;
-  color: gray;
-}
-
-.dest-card a {
-  display: inline-block;
-  margin: 3px 10px;
-  color: green;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.dest-card a:hover {
-  text-decoration: underline;
-}
-
-/* =========================
-   HOTEL SECTION
-========================= */
-.hotel {
-    background-color: #ffffff;
-    color: #1F2937;
-}
-.hotel-content {
-    align-items: center;
-    gap: 60px;
-    width: min(1420px, 90%);
-    margin: 0 auto;
-    padding: 50px 0;
-    box-sizing: border-box;
-}
-.hotel-content .page-title{
-    text-align: center;
-}
-.hotel-content h3{
-    margin: 10px;
-}
-.hotel-card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-.hotel-card {
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
-  height: 220px;
-  background: white;
-
-  box-shadow:
-    0 8px 15px rgba(0, 0, 0, 0.2),
-    0 12px 30px rgba(0, 0, 0, 0.15);
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.hotel-overlay {
-  position: absolute;
-  inset: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-
-  padding: 20px;
-  color: white;
-
-  background: linear-gradient(
-    to top,
-    rgb(3, 15, 27) 0%,
-    rgba(7, 31, 56, 0.582) 60%,
-    rgba(4, 22, 41, 0) 100%
-  );
-}
-.hotel-card:hover {
-  transform: translateY(-10px) scale(1.025);
-
-  box-shadow:
-    0 25px 40px rgba(0, 0, 0, 0.25),
-    0 40px 80px rgba(0, 0, 0, 0.18);
-}
-
-.hotel-card img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.hotel-card i {
-  margin: 0px 10px 0px 10px;
-  font-size: 1.7rem;
-  color: #facc15;
-}
-.hotel-card h3 {
-  margin: 20px 10px 3px 10px;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.hotel-card p {
-  margin: 3px 10px;
-  color: gray;
-}
-.button-hotel{
-    text-align: center;
-    margin: 20px 0px;
-}
-.btn-hotel{
-    color: white;
-    border: none;
-    background: #1E8E6E;
-    border-radius: 30px;
-    padding: 10px 28px;
-    font-size: 1rem;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-}
-.btn-hotel:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(31, 41, 55, 0.2);
-}
-
-
 /* =========================
    VIDEO TOUR SECTION
 ========================= */
@@ -738,66 +387,7 @@ body {
 }
 
 
-/* =========================
-   STORY SECTION
-========================= */
-.story {
-    background-color: #faf8f8;
-    color: #1F2937;
-}
-.story-content {
-    align-items: center;
-    gap: 60px;
-    width: min(1420px, 90%);
-    margin: 0 auto;
-    padding: 50px 0;
-    box-sizing: border-box;
-}
-.story-content .page-title{
-    text-align: center;
-}
-.story-card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-.story-card{
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    height: 220px;
-    background: white;
-    padding: 15px 30px;
 
-    box-shadow:
-        0 8px 15px rgba(0, 0, 0, 0.2),
-        0 12px 30px rgba(0, 0, 0, 0.15);
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.story-card:hover {
-  transform: translateY(-10px) scale(1.025);
-
-  box-shadow:
-    0 25px 40px rgba(0, 0, 0, 0.25),
-    0 40px 80px rgba(0, 0, 0, 0.18);
-}
-.story-user{
-    display: flex;
-    align-items: center;
-}
-.story-user img{
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-}
-.user-details{
-    margin-left: 20px;
-}
-.story-para{
-    margin-top: 20px;
-}
 
 
 /* =========================
@@ -977,63 +567,6 @@ body {
 }
 
 /* =========================
-   INSPIRED SECTION
-========================= */
-.inspired {
-    background-color: #ffffff;
-    color: #1F2937;
-}
-.inspired-content {
-    align-items: center;
-    gap: 60px;
-    width: min(1420px, 90%);
-    margin: 0 auto;
-    padding: 50px 0;
-    box-sizing: border-box;
-    text-align: center;
-}
-.inspired-content .page-title{
-    text-align: center;
-    width: 85%;
-    margin: 20px auto 40px auto;
-}
-
-.inspired-card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-.inspired-card {
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
-  height: auto;
-  background: white;
-
-  box-shadow:
-    0 8px 15px rgba(0, 0, 0, 0.2),
-    0 12px 30px rgba(0, 0, 0, 0.15);
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.inspired-card:hover {
-  transform: translateY(-10px) scale(1.025);
-
-  box-shadow:
-    0 25px 40px rgba(0, 0, 0, 0.25),
-    0 40px 80px rgba(0, 0, 0, 0.18);
-}
-
-.inspired-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-
-/* =========================
    CTA SECTION
 ========================= */
 .cta {
@@ -1126,13 +659,6 @@ body {
     gap: 30px;
 }
 
-.footer-logo img {
-    width: 100px;
-    height: 50px;
-    border: 1px solid white;
-    padding: 5px 15px;
-    border-radius: 10px;
-}
 
 .footer-logo span {
     width: 80%;
@@ -1197,7 +723,6 @@ body {
     align-items: center;
     gap: 15px;
 }
-
 .footer-social i {
     font-size: 1.4rem;
     width: 40px;
@@ -1214,14 +739,12 @@ body {
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
-
 .footer-social i:hover {
     background: #0E2A47;
     color: white;
     transform: translateY(-4px) scale(1.1);
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
-
 /* =========================
    BOTTOM
 ========================= */
@@ -1393,161 +916,7 @@ body {
 }
 
 
-/* =========================
-   ABOUT RESPONSIVE
-========================= */
 
-@media (max-width: 1080px){
-    .about-img-text {
-        left: 0%;
-        transform: translateY(220%);
-        max-width: 200%;
-    }
-    .about-img-2{
-        margin-left: -70%;
-    }
-    .about-img-text{
-        width: 120%;
-    }
-}
-
-/* Tablets landscape */
-@media (max-width: 1024px) {
-    .about-content {
-        gap: 40px;
-        padding: 80px 0;
-    }
-    .page-head {
-        font-size: clamp(1.5rem, 3.5vw, 2.4rem);
-    }
-}
-
-/* Tablets portrait — stack vertically */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        padding: 60px 0;
-        gap: 50px;
-    }
-    .about-left {
-        width: 100%;
-    }
-    
-    .about-mobile {
-         display: block;
-    }
-    .about-lap {
-         display: none;
-    }
-    .about-right {
-        width: 60%;
-    }
-    .about-img-2 {
-        margin-top: 30px;
-    }
-    .about-img-text {
-        bottom: 16px;
-        padding: 8px 16px;
-        max-width: 95%;
-        margin: 0px auto 110px 2%;
-    }
-    .about-img-text p {
-        font-size: 0.82rem;
-    }
-    .about-para {
-        margin: 24px 0;
-    }
-}
-
-/* Large phones */
-@media (max-width: 600px) {
-    .about-content {
-        padding: 50px 0;
-        gap: 40px;
-    }
-    .about-right {
-        width: 80%;
-    }
-    .about-img-box {
-        width: 100%;
-        display: block;
-    }
-    .about-img-2 {
-        width: 100%;
-        margin-top: 12%;
-    }
-    .about-img-text {
-        transform: none;
-        margin: -100px auto 0 5%;
-        max-width: 90%;
-        white-space: normal;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    }
-    .about-para p {
-        font-size: 0.95rem;
-        text-align: justify;
-    }
-    .btn-cta-about {
-        width: 100%;
-        justify-content: center;
-    }
-}
-
-/* Small phones */
-@media (max-width: 400px) {
-    .about-content {
-        padding: 40px 0;
-    }
-    .page-head {
-        font-size: 1.5rem;
-    }
-    .about-right {
-        width: 100%;
-    }
-}
-
-
-/* =========================
-   DESTINATION RESPONSIVE
-========================= */
-
-@media (max-width: 800px) {
-
-  .card-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    padding: 15px;
-  }
-
-  .card {
-    height: 30px; /* adjusted for smaller screen */
-  }
-
-  .card img {
-    height: 60%; /* keep image ratio balanced */
-  }
-
-  .card-content {
-    height: 40%;
-    padding: 10px;
-  }
-
-  .card-content h3 {
-    font-size: 0.95rem;
-  }
-
-  .card-content p {
-    font-size: 0.8rem;
-  }
-
-  .card-content a {
-    font-size: 0.8rem;
-  }
-  .btn-dest{
-        justify-content: flex-start;
-        margin-top: 20px;
-    }
-}
 
 /* =========================
    VIDEO TOUR RESPONSIVE
@@ -1573,16 +942,6 @@ body {
 
 
 /* =========================
-   USER STORY RESPONSIVE
-========================= */
-@media (max-width:450px){
-    .story-card-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-}
-
-
-/* =========================
    FAQ RESPONSIVE
 ========================= */
 @media (max-width: 900px){
@@ -1603,6 +962,11 @@ body {
         object-fit: cover;
         border-radius: 20px;
         margin-bottom: 20px;
+    }
+}
+@media (max-width: 480px){
+    .faq-container{
+        font-size: 0.9rem;
     }
 }
 
@@ -1632,20 +996,6 @@ body {
     .trust-details h3{
         font-size: 1rem;
         font-weight: 600;
-    }
-}
-
-/* =========================
-   INSPIRED RESPONSIVE
-========================= */
-@media (max-width:1200px){
-    .inspired-card-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-}
-@media (max-width:600px){
-    .inspired-card-container {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
 

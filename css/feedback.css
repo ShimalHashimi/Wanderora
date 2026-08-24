@@ -1,0 +1,136 @@
+/* =========================    STORY SECTION    ========================= */
+
+.story {
+    background-color: #faf8f8;
+    color: #1F2937;
+}
+.story-content {
+    align-items: center;
+    gap: 60px;
+    width: min(1420px, 90%);
+    margin: 0 auto;
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+.story-content .page-title{
+    text-align: center;
+}
+.story-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.story-card{
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 220px;
+    background: white;
+    padding: 15px 30px;
+
+    box-shadow:
+        0 8px 15px rgba(0, 0, 0, 0.2),
+        0 12px 30px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.story-card:hover {
+  transform: translateY(-10px) scale(1.025);
+
+  box-shadow:
+    0 25px 40px rgba(0, 0, 0, 0.25),
+    0 40px 80px rgba(0, 0, 0, 0.18);
+}
+.story-user{
+    display: flex;
+    align-items: center;
+}
+.story-user img{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+.user-details{
+    margin-left: 20px;
+}
+.story-para{
+    margin-top: 20px;
+}
+.story-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+.story-nav button {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.story-small{
+        display: none;
+    }
+
+@media (max-width:1256px){
+    .story-card{
+        box-shadow:
+            0 8px 15px #faf8f8,
+            0 12px 30px #faf8f8;
+    }
+
+    .story-big{
+        display: none;
+    }
+    .story-small{
+        display: block;
+    }
+}
+.story-small .carousel-indicators {
+  margin: 20px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.story-small .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  border: none;
+  opacity: 1;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.story-small .carousel-indicators [data-bs-target]:hover {
+  background-color: #9ca3af;
+}
+
+.story-small .carousel-indicators [data-bs-target].active {
+  width: 26px;
+  border-radius: 5px;
+  background-color: #1F2937;
+}
+
+@media (max-width: 480px) {
+  .story-small .carousel-indicators {
+    margin-top: 15px;
+    gap: 8px;
+  }
+  .story-small .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+  }
+  .story-small .carousel-indicators [data-bs-target].active {
+    width: 20px;
+  }
+  .story-para{
+    font-size: 0.9rem;
+}
+}

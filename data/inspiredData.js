@@ -1,0 +1,16 @@
+export const inspiredData = [
+  { image: "Images/Inspired by section/ImageWithFallback1.png", caption: "Golden beaches at sunset", size: "tall" },
+  { image: "Images/Inspired by section/ImageWithFallback.png", caption: "Ancient temples of Kandy", size: "wide" },
+  { image: "Images/Inspired by section/ImageWithFallback3.png", caption: "Misty hills of Ella", size: "normal" },
+  { image: "Images/Inspired by section/ImageWithFallback4.png", caption: "Wildlife safari at Yala", size: "normal" },
+  { image: "Images/Inspired by section/ImageWithFallback5.png", caption: "Tea plantations of Nuwara Eliya", size: "tall" },
+  { image: "Images/Inspired by section/ImageWithFallback6.png", caption: "Colonial charm of Galle Fort", size: "normal" },
+  { image: "Images/Inspired by section/ImageWithFallback7.png", caption: "Surfing waves in Arugam Bay", size: "wide" },
+  { image: "Images/Inspired by section/ImageWithFallback8.png", caption: "Sacred city of Anuradhapura", size: "normal" },
+  { image: "Images/Inspired by section/ImageWithFallback1.png", caption: "Whale watching in Mirissa", size: "normal" },
+  { image: "Images/Inspired by section/ImageWithFallback.png", caption: "Rock fortress of Sigiriya", size: "tall" },
+  { image: "Images/Inspired by section/ImageWithFallback3.png", caption: "Local street food markets", size: "normal" },
+  { image: "Images/Inspired by section/ImageWithFallback4.png", caption: "Train ride through the hills", size: "wide" },
+  { image: "Images/Inspired by section/ImageWithFallback5.png", caption: "Fishermen at Weligama", size: "normal" },
+  { image: "Images/Inspired by section/ImageWithFallback6.png", caption: "Botanical gardens of Peradeniya", size: "normal" },
+];
