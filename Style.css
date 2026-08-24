@@ -19,7 +19,7 @@ body {
     box-sizing: border-box;
     transition: 0.5s ease;
     animation: fadeTop 0.5s ease;
-    background-color: #f80000;
+    background-color: #ffffff;
 }
 
 .navbar-inner{
